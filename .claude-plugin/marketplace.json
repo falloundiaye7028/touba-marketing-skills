@@ -1,18 +1,18 @@
 {
   "name": "marketingskills",
   "owner": {
-    "name": "Corey Haines",
-    "url": "https://corey.co"
+    "name": "Mamadou Falilou Ndiaye",
+    "url": "https://github.com/falloundiaye7028"
   },
   "metadata": {
-    "description": "Marketing skills for AI agents — conversion optimization, copywriting, SEO, paid ads, and growth",
-    "version": "2.11.1",
-    "repository": "https://github.com/coreyhaines31/marketingskills"
+    "description": "Marketing skills for AI agents, customized for Senegal — local context, French/Wolof content, SEO, FCFA pricing, WhatsApp, paid ads, conversion, and growth",
+    "version": "2.12.0",
+    "repository": "https://github.com/falloundiaye7028/touba-marketing-skills"
   },
   "plugins": [
     {
       "name": "marketing-skills",
-      "description": "50 marketing skills for technical marketers and founders: CRO, copywriting, cold email, prospecting, SEO, AI SEO, paid ads, SMS, ad creative, video production, image generation, co-marketing, churn prevention, pricing, referrals, revenue operations, sales enablement, customer research, site architecture, comprehensive AARRR-structured marketing plans, public relations and earned media, offer design, event marketing and webinars, and more",
+      "description": "56 marketing skills, including Senegal market context, French/Wolof social content, local SEO, FCFA pricing, paid campaigns, WhatsApp commerce, CRO, copywriting, analytics, and growth",
       "source": "./"
     }
   ]

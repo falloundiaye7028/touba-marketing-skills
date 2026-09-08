@@ -4,6 +4,12 @@ Current versions of all skills. Agents can compare against local versions to che
 
 | Skill | Version | Last Updated |
 |-------|---------|--------------|
+| senegal-digital-campaigns | 1.0.0 | 2026-09-08 |
+| senegal-fcfa-pricing | 1.0.0 | 2026-09-08 |
+| senegal-local-seo | 1.0.0 | 2026-09-08 |
+| senegal-market-context | 1.0.0 | 2026-09-08 |
+| senegal-social-content | 1.0.0 | 2026-09-08 |
+| senegal-whatsapp-commerce | 1.0.0 | 2026-09-08 |
 | ab-testing | 2.0.0 | 2026-05-05 |
 | ad-creative | 2.8.2 | 2026-08-23 |
 | ai-seo | 2.5.0 | 2026-09-04 |
@@ -56,6 +62,11 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.1.0 | 2026-07-14 |
 
 ## Recent Changes
+
+### 2.12.0 (2026-09-08)
+
+- Added six Senegal-focused skills covering market context, social content, local SEO, digital campaigns, FCFA pricing, and WhatsApp commerce.
+- Localized the plugin metadata for the `falloundiaye7028/touba-marketing-skills` fork while preserving the upstream MIT-licensed skills.
 
 ### 2.11.1 (2026-09-04)
 
