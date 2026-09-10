@@ -1,12 +1,12 @@
 {
   "name": "marketing-skills",
-  "description": "Marketing skills for AI agents — conversion optimization, copywriting, SEO, paid ads, ad creative, and growth",
-  "version": "2.11.1",
+  "description": "Marketing skills for AI agents, customized for Senegal — local context, French/Wolof content, SEO, FCFA pricing, WhatsApp, paid ads, conversion, and growth",
+  "version": "2.12.0",
   "author": {
     "name": "Corey Haines"
   },
-  "homepage": "https://github.com/coreyhaines31/marketingskills",
-  "repository": "https://github.com/coreyhaines31/marketingskills",
+  "homepage": "https://github.com/falloundiaye7028/touba-marketing-skills",
+  "repository": "https://github.com/falloundiaye7028/touba-marketing-skills",
   "license": "MIT",
   "skills": "./skills"
 }

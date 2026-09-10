@@ -1,6 +1,8 @@
-# Marketing Skills for AI Agents
+# Touba Marketing Skills for AI Agents
 
-A collection of AI agent skills focused on marketing tasks. Built for technical marketers and founders who want AI coding agents to help with conversion optimization, copywriting, SEO, analytics, and growth engineering. Works with Claude Code, OpenAI Codex, Cursor, Windsurf, and any agent that supports the [Agent Skills spec](https://agentskills.io).
+A Senegal-focused fork of Marketing Skills for AI Agents. It preserves the upstream CRO, copywriting, SEO, analytics, and growth capabilities and adds local context, French/Wolof content, FCFA pricing, WhatsApp commerce, local SEO, and Senegal campaign workflows. Works with Claude Code, OpenAI Codex, Cursor, Windsurf, and any agent that supports the [Agent Skills spec](https://agentskills.io).
+
+Original project by [Corey Haines](https://github.com/coreyhaines31/marketingskills), used under the MIT license.
 
 Built by [Corey Haines](https://corey.co?ref=marketingskills). Need hands-on help? Check out [Conversion Factory](https://conversionfactory.co?ref=marketingskills) — Corey's agency for conversion optimization, landing pages, and growth strategy. Want to learn more about marketing? Subscribe to [Swipe Files](https://swipefiles.com?ref=marketingskills). Want to get dangerously good at using AI for marketing? Check out [AI Marketing Training](https://conversionfactory.co/offers/ai-marketing-training?ref=marketingskills). Want an autonomous AI agent that uses these skills to be your CMO? Try [Magister](https://magistermarketing.com?ref=marketingskills).
 
@@ -112,6 +114,12 @@ See each skill's **Related Skills** section for the full dependency map.
 | [revops](skills/revops/) | When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes.... |
 | [sales-enablement](skills/sales-enablement/) | When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also... |
 | [schema](skills/schema/) | When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user... |
+| [senegal-digital-campaigns](skills/senegal-digital-campaigns/) | Plan, audit, or optimize paid digital campaigns for Senegalese audiences, including click-to-WhatsApp and FCFA budgets. |
+| [senegal-fcfa-pricing](skills/senegal-fcfa-pricing/) | Design, localize, or review offers and pricing in FCFA/XOF for Senegalese customers. |
+| [senegal-local-seo](skills/senegal-local-seo/) | Audit or improve local SEO and geographic discovery for Senegal-based organizations. |
+| [senegal-market-context](skills/senegal-market-context/) | Build the Senegal-specific market context used by the other marketing skills. |
+| [senegal-social-content](skills/senegal-social-content/) | Plan, write, adapt, or audit French/Wolof social content for Senegal and the diaspora. |
+| [senegal-whatsapp-commerce](skills/senegal-whatsapp-commerce/) | Design WhatsApp-centered acquisition, sales, support, and follow-up journeys. |
 | [seo-audit](skills/seo-audit/) | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO... |
 | [signup](skills/signup/) | When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the... |
 | [site-architecture](skills/site-architecture/) | When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal... |
@@ -128,13 +136,13 @@ Use [npx skills](https://github.com/vercel-labs/skills) to install skills direct
 
 ```bash
 # Install all skills
-npx skills add coreyhaines31/marketingskills
+npx skills add falloundiaye7028/touba-marketing-skills
 
 # Install specific skills
-npx skills add coreyhaines31/marketingskills --skill cro copywriting
+npx skills add falloundiaye7028/touba-marketing-skills --skill senegal-market-context senegal-social-content
 
 # List available skills
-npx skills add coreyhaines31/marketingskills --list
+npx skills add falloundiaye7028/touba-marketing-skills --list
 ```
 
 The CLI detects which agents you have installed and asks where to install. For Claude Code it installs into `.claude/skills/`; universal agents share `.agents/skills/`.
@@ -143,7 +151,7 @@ The CLI detects which agents you have installed and asks where to install. For C
 > If you run the command from **inside** an agent session (e.g., asking Claude Code to install the skills for you), the CLI runs non-interactively and may only install to the universal `.agents/skills/` directory, which Claude Code does not read. Pass the agent explicitly:
 >
 > ```bash
-> npx skills add coreyhaines31/marketingskills -a claude-code
+> npx skills add falloundiaye7028/touba-marketing-skills -a claude-code
 > ```
 
 ### Option 2: Claude Code Plugin
@@ -152,7 +160,7 @@ Install via Claude Code's built-in plugin system:
 
 ```bash
 # Add the marketplace
-/plugin marketplace add coreyhaines31/marketingskills
+/plugin marketplace add falloundiaye7028/touba-marketing-skills
 
 # Install all marketing skills
 /plugin install marketing-skills
@@ -163,7 +171,7 @@ Install via Claude Code's built-in plugin system:
 Clone the entire repo and copy the skills folder:
 
 ```bash
-git clone https://github.com/coreyhaines31/marketingskills.git
+git clone https://github.com/falloundiaye7028/touba-marketing-skills.git
 cp -r marketingskills/skills/* .agents/skills/
 ```
 
@@ -172,7 +180,7 @@ cp -r marketingskills/skills/* .agents/skills/
 Add as a submodule for easy updates:
 
 ```bash
-git submodule add https://github.com/coreyhaines31/marketingskills.git .agents/marketingskills
+git submodule add https://github.com/falloundiaye7028/touba-marketing-skills.git .agents/touba-marketing-skills
 ```
 
 Then reference skills from `.agents/marketingskills/skills/`.
@@ -189,13 +197,13 @@ Use [SkillKit](https://github.com/rohitg00/skillkit) to install skills across mu
 
 ```bash
 # Install all skills
-npx skillkit install coreyhaines31/marketingskills
+npx skillkit install falloundiaye7028/touba-marketing-skills
 
 # Install specific skills
-npx skillkit install coreyhaines31/marketingskills --skill cro copywriting
+npx skillkit install falloundiaye7028/touba-marketing-skills --skill senegal-local-seo senegal-social-content
 
 # List available skills
-npx skillkit install coreyhaines31/marketingskills --list
+npx skillkit install falloundiaye7028/touba-marketing-skills --list
 ```
 
 ## Upgrading from v1.x to v2.0
@@ -212,7 +220,7 @@ rm -rf page-cro form-cro \
        signup-flow-cro social-content
 ```
 
-Then reinstall the v2.0 skills via your usual method (e.g., `npx skills add coreyhaines31/marketingskills`).
+Then reinstall the skills via your usual method (e.g., `npx skills add falloundiaye7028/touba-marketing-skills`).
 
 ### Migrate the product marketing context file
 
