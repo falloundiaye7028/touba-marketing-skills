@@ -1,0 +1,4 @@
+interface:
+  display_name: "Touba Expert Marketing Skills"
+  short_description: "Marketing sénégalais en français, wolof et FCFA"
+  default_prompt: "Utilise $touba-expert-marketing pour préparer un plan marketing de 30 jours pour Touba Infos au Sénégal."

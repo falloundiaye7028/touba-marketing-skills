@@ -53,9 +53,18 @@ Current versions of all skills. Agents can compare against local versions to che
 | site-architecture | 2.0.0 | 2026-05-05 |
 | sms | 1.0.0 | 2026-05-21 |
 | social | 2.2.0 | 2026-07-09 |
+| touba-expert-marketing | 1.0.0 | 2026-09-13 |
 | video | 2.1.0 | 2026-07-14 |
 
 ## Recent Changes
+
+### 2.12.0 (2026-09-13)
+
+- Première adaptation Touba Expert du fork : nouveau skill `touba-expert-marketing` (1.0.0), six projets, français/wolof, FCFA et référencement sénégalais.
+- Quatre commandes locales et plugin : audit-seo, campagne-facebook, publication-tiktok et plan-marketing.
+- Fiche Touba Infos fondée sur le site fourni https://toubainfos.com/ ; données inconnues explicitement signalées.
+- README français, métadonnées du fork et attribution amont. Aucune publication sociale, campagne payante ou installation locale automatique.
+
 
 ### 2.11.1 (2026-09-04)
 

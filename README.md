@@ -1,69 +1,62 @@
-# Marketing Skills for AI Agents
+# Touba Expert Marketing Skills
 
-A collection of AI agent skills focused on marketing tasks. Built for technical marketers and founders who want AI coding agents to help with conversion optimization, copywriting, SEO, analytics, and growth engineering. Works with Claude Code, OpenAI Codex, Cursor, Windsurf, and any agent that supports the [Agent Skills spec](https://agentskills.io).
+Kit marketing pour Touba Infos, Intelligence Immobilier, Intelligence BTP, ScolarisPay, Touba Expert Group et KiirayTouba.
 
-Built by [Corey Haines](https://corey.co?ref=marketingskills). Need hands-on help? Check out [Conversion Factory](https://conversionfactory.co?ref=marketingskills) — Corey's agency for conversion optimization, landing pages, and growth strategy. Want to learn more about marketing? Subscribe to [Swipe Files](https://swipefiles.com?ref=marketingskills). Want to get dangerously good at using AI for marketing? Check out [AI Marketing Training](https://conversionfactory.co/offers/ai-marketing-training?ref=marketingskills). Want an autonomous AI agent that uses these skills to be your CMO? Try [Magister](https://magistermarketing.com?ref=marketingskills).
+## État
 
-New to the terminal and coding agents? Check out the companion guide [Coding for Marketers](https://codingformarketers.com?ref=marketingskills).
+Fork de [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills), créé par Corey Haines, sous [licence MIT](LICENSE). Les compétences d’origine sont conservées ; le skill `touba-expert-marketing` ajoute le contexte sénégalais et les six projets. Voir la [documentation d’origine](README.upstream.md).
 
-**Contributions welcome!** Found a way to improve a skill or have a new one to add? [Open a PR](#contributing).
+Version du fork : **2.12.0**. Touba Infos : https://toubainfos.com/, fourni par l’utilisateur et consulté le 13 septembre 2026. Les positionnements des autres projets restent des hypothèses éditables, pas des offres commerciales vérifiées.
 
-Run into a problem or have a question? [Open an issue](https://github.com/coreyhaines31/marketingskills/issues) — we're happy to help.
+## Installation du fork
 
-## Partners
-
-The library is free and MIT-licensed. [Verified Partners](tools/REGISTRY.md#verified-partners) fund the work — vetted, disclosed tool integrations, listed alongside the neutral options and never influencing what the core skills recommend. The full rules and boundaries are in [tools/PARTNERS.md](tools/PARTNERS.md). [Become a partner →](https://marketing-skills.com/sponsorship)
-
-<!-- PARTNERS:START -->
-> ◆ **[Converly](https://converly.io?ref=marketingskills)** — *Conversion tracking / attribution.* Server-side conversion tracking that fires when someone submits a form, books a meeting, or starts a chat — passing click IDs and identifiers for Enhanced Conversions (Google) and high EMQ match rates (Meta), across 100+ tools. CLI + MCP so your agent sets it up in minutes. → [Integration guide](tools/integrations/converly.md)
-
-> ◆ **[Ploy](https://ploy.ai?ref=marketingskills)** — *AI website & growth platform.* AI marketing platform built around a Webflow-grade website builder — site optimization, SEO/AEO, visitor identification, and ad creative in one, with WebMCP to expose site actions to AI assistants. → [Integration guide](tools/integrations/ploy.md)
-<!-- PARTNERS:END -->
-
-<!-- The Partners block above is generated from partners.json — run `node scripts/sync-partners.mjs` after editing it. -->
-
-## What are Skills?
-
-Skills are markdown files that give AI agents specialized knowledge and workflows for specific tasks. When you add these to your project, your agent can recognize when you're working on a marketing task and apply the right frameworks and best practices.
-
-## How Skills Work Together
-
-Skills reference each other and build on shared context. The `product-marketing` skill is the foundation — every other skill checks it first to understand your product, audience, and positioning before doing anything.
-
-```
-                            ┌──────────────────────────────────────┐
-                            │          product-marketing           │
-                            │    (read by all other skills first)  │
-                            └──────────────────┬───────────────────┘
-                                               │
-    ┌──────────────┬─────────────┬─────────────┼─────────────┬──────────────┬──────────────┐
-    ▼              ▼             ▼             ▼             ▼              ▼              ▼
-┌──────────┐ ┌──────────┐ ┌──────────┐ ┌────────────┐ ┌──────────┐ ┌─────────────┐ ┌───────────┐
-│  SEO &   │ │   CRO    │ │Content & │ │  Paid &    │ │ Growth & │ │  Sales &    │ │ Strategy  │
-│ Content  │ │          │ │   Copy   │ │Measurement │ │Retention │ │    GTM      │ │           │
-├──────────┤ ├──────────┤ ├──────────┤ ├────────────┤ ├──────────┤ ├─────────────┤ ├───────────┤
-│seo-audit │ │cro       │ │copywritng│ │ads         │ │referrals │ │revops       │ │mktg-ideas │
-│ai-seo    │ │signup    │ │copy-edit │ │ad-creative │ │free-tools│ │sales-enable │ │mktg-psych │
-│site-arch │ │onboarding│ │cold-email│ │ab-testing  │ │churn-    │ │launch       │ │customer-  │
-│programm  │ │popups    │ │emails    │ │analytics   │ │ prevent  │ │pricing      │ │ research  │
-│schema    │ │paywalls  │ │social    │ │            │ │community │ │competitors  │ │           │
-│content   │ │          │ │video     │ │            │ │lead-magnt│ │comp-profile │ │           │
-│aso       │ │          │ │image     │ │            │ │co-mktg   │ │directory    │ │           │
-│          │ │          │ │sms       │ │            │ │          │ │prospecting  │ │           │
-└────┬─────┘ └────┬─────┘ └────┬─────┘ └─────┬──────┘ └────┬─────┘ └──────┬──────┘ └─────┬─────┘
-     │            │            │              │             │              │              │
-     └────────────┴─────┬──────┴──────────────┴─────────────┴──────────────┴──────────────┘
-                        │
-         Skills cross-reference each other:
-           copywriting ↔ cro ↔ ab-testing
-           revops ↔ sales-enablement ↔ cold-email
-           seo-audit ↔ schema ↔ ai-seo
-           customer-research → copywriting, cro, competitors
+```bash
+git clone https://github.com/falloundiaye7028/touba-marketing-skills.git
+cd touba-marketing-skills
 ```
 
-See each skill's **Related Skills** section for the full dependency map.
+Dans Claude Code, installation comme plugin :
 
-## Available Skills
+```text
+/plugin marketplace add falloundiaye7028/touba-marketing-skills
+/plugin install touba-marketing-skills@touba-marketing-skills
+```
+
+Les commandes du plugin sont nommées `/touba-marketing-skills:audit-seo`, `/touba-marketing-skills:campagne-facebook`, `/touba-marketing-skills:publication-tiktok` et `/touba-marketing-skills:plan-marketing`. Le dossier racine `commands/` contient leurs points d’entrée. Pour obtenir les formes courtes `/audit-seo`, etc., utiliser les commandes locales ci-dessous. Ne pas installer les deux variantes si vous ne voulez pas les voir en double.
+
+Référence technique : [composants de plugin Claude Code](https://code.claude.com/docs/en/plugins-reference).
+
+## Utilisation
+
+- **Codex** : copier le dossier `skills/touba-expert-marketing` dans votre répertoire de skills (habituellement `~/.codex/skills/`), puis invoquer `$touba-expert-marketing` et préciser la tâche. La visibilité du skill dépend du rechargement de l’hôte.
+- **Claude Code** : copier `.claude/commands/` et `skills/` à la racine du projet. Les fichiers de commandes renvoient aux instructions du kit. Les commandes slash sont prévues pour Claude Code ; leur enregistrement dépend de l’hôte utilisé.
+- **Autre assistant** : fournir `SKILL.md` et les références pertinentes, puis formuler la demande en langage naturel.
+
+| Commande | Livrable |
+|---|---|
+| `/audit-seo` | Audit local fondé sur les pages et données accessibles |
+| `/campagne-facebook` | Brief, créations, budget FCFA et suivi des conversations |
+| `/publication-tiktok` | Script vertical, plans, sous-titres et appel à l’action |
+| `/plan-marketing` | Plan de 30 jours par projet, canal, budget et indicateur |
+
+Exemples :
+
+```text
+/audit-seo projet="Intelligence Immobilier" url="https://votre-domaine.sn" ville="Touba"
+/campagne-facebook projet="ScolarisPay" ville="Dakar" budget="100000 XOF" duree="10 jours" objectif="demandes de démonstration"
+/publication-tiktok projet="Touba Infos" sujet="actualité locale vérifiée" langue="français et wolof" duree="30 secondes"
+/plan-marketing projet="Intelligence BTP" ville="Thiès" budget="200000 XOF" periode="30 jours"
+```
+
+Ces exemples sont des briefs, pas des données sur les entreprises. Les commandes acceptent du texte libre. Aucun compte publicitaire, connecteur, envoi WhatsApp ou publication automatique n’est configuré.
+
+## Personnalisation
+
+Compléter `skills/touba-expert-marketing/references/projets.md` avec les offres réelles, zones desservies, tarifs, coordonnées et preuves. Les champs absents restent explicitement inconnus. Les versions wolof sont proposées comme brouillons et signalent les formulations incertaines.
+
+Les budgets d’exemple ne sont ni des tarifs publicitaires constatés ni des garanties de résultat. Le kit sépare dépenses média, production, prestations et frais éventuels.
+
+## Compétences disponibles
 
 <!-- SKILLS:START -->
 | Skill | Description |
@@ -117,232 +110,6 @@ See each skill's **Related Skills** section for the full dependency map.
 | [site-architecture](skills/site-architecture/) | When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal... |
 | [sms](skills/sms/) | When the user wants to plan, build, or optimize SMS or MMS marketing — including welcome flows, abandoned cart texts,... |
 | [social](skills/social/) | When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram,... |
+| [touba-expert-marketing](skills/touba-expert-marketing/) | Préparer des audits SEO local sénégalais, campagnes Facebook et WhatsApp, scripts TikTok et plans marketing pour les... |
 | [video](skills/video/) | When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use... |
 <!-- SKILLS:END -->
-
-## Installation
-
-### Option 1: CLI Install (Recommended)
-
-Use [npx skills](https://github.com/vercel-labs/skills) to install skills directly:
-
-```bash
-# Install all skills
-npx skills add coreyhaines31/marketingskills
-
-# Install specific skills
-npx skills add coreyhaines31/marketingskills --skill cro copywriting
-
-# List available skills
-npx skills add coreyhaines31/marketingskills --list
-```
-
-The CLI detects which agents you have installed and asks where to install. For Claude Code it installs into `.claude/skills/`; universal agents share `.agents/skills/`.
-
-> [!TIP]
-> If you run the command from **inside** an agent session (e.g., asking Claude Code to install the skills for you), the CLI runs non-interactively and may only install to the universal `.agents/skills/` directory, which Claude Code does not read. Pass the agent explicitly:
->
-> ```bash
-> npx skills add coreyhaines31/marketingskills -a claude-code
-> ```
-
-### Option 2: Claude Code Plugin
-
-Install via Claude Code's built-in plugin system:
-
-```bash
-# Add the marketplace
-/plugin marketplace add coreyhaines31/marketingskills
-
-# Install all marketing skills
-/plugin install marketing-skills
-```
-
-### Option 3: Clone and Copy
-
-Clone the entire repo and copy the skills folder:
-
-```bash
-git clone https://github.com/coreyhaines31/marketingskills.git
-cp -r marketingskills/skills/* .agents/skills/
-```
-
-### Option 4: Git Submodule
-
-Add as a submodule for easy updates:
-
-```bash
-git submodule add https://github.com/coreyhaines31/marketingskills.git .agents/marketingskills
-```
-
-Then reference skills from `.agents/marketingskills/skills/`.
-
-### Option 5: Fork and Customize
-
-1. Fork this repository
-2. Customize skills for your specific needs
-3. Clone your fork into your projects
-
-### Option 6: SkillKit (Multi-Agent)
-
-Use [SkillKit](https://github.com/rohitg00/skillkit) to install skills across multiple AI agents (Claude Code, Cursor, Copilot, etc.):
-
-```bash
-# Install all skills
-npx skillkit install coreyhaines31/marketingskills
-
-# Install specific skills
-npx skillkit install coreyhaines31/marketingskills --skill cro copywriting
-
-# List available skills
-npx skillkit install coreyhaines31/marketingskills --list
-```
-
-## Upgrading from v1.x to v2.0
-
-v2.0 renames 17 skills and consolidates `page-cro` + `form-cro` into a single `cro` skill. If you installed the v1.x skills, you'll have **stale old-name folders** in your install directory after upgrading — the new skills install alongside the old ones, so you'll see both `skills/page-cro/` and `skills/cro/`, etc. Clean them up:
-
-```bash
-# From the directory where you installed the skills (e.g., .agents/skills/ or .claude/skills/)
-rm -rf page-cro form-cro \
-       ab-test-setup analytics-tracking aso-audit competitor-alternatives \
-       email-sequence free-tool-strategy launch-strategy onboarding-cro \
-       paid-ads paywall-upgrade-cro popup-cro pricing-strategy \
-       product-marketing-context referral-program schema-markup \
-       signup-flow-cro social-content
-```
-
-Then reinstall the v2.0 skills via your usual method (e.g., `npx skills add coreyhaines31/marketingskills`).
-
-### Migrate the product marketing context file
-
-In v2.0 the context file moved from `.claude/` to `.agents/` and was renamed from `product-marketing-context.md` to `product-marketing.md`. Move your existing context file:
-
-```bash
-mkdir -p .agents
-# v2.0 file (or pre-v2.0 file with new name)
-mv .claude/product-marketing.md .agents/product-marketing.md 2>/dev/null
-# pre-v2.0 file with legacy name
-mv .claude/product-marketing-context.md .agents/product-marketing.md 2>/dev/null
-```
-
-Skills will still check `.claude/` and the legacy `product-marketing-context.md` filename as fallbacks, so nothing breaks if you don't migrate.
-
-### Full rename map
-
-| Old | New |
-|-----|-----|
-| `ab-test-setup` | `ab-testing` |
-| `analytics-tracking` | `analytics` |
-| `aso-audit` | `aso` |
-| `competitor-alternatives` | `competitors` |
-| `email-sequence` | `emails` |
-| `form-cro` | merged into `cro` |
-| `free-tool-strategy` | `free-tools` |
-| `launch-strategy` | `launch` |
-| `onboarding-cro` | `onboarding` |
-| `page-cro` | `cro` |
-| `paid-ads` | `ads` |
-| `paywall-upgrade-cro` | `paywalls` |
-| `popup-cro` | `popups` |
-| `pricing-strategy` | `pricing` |
-| `product-marketing-context` | `product-marketing` |
-| `referral-program` | `referrals` |
-| `schema-markup` | `schema` |
-| `signup-flow-cro` | `signup` |
-| `social-content` | `social` |
-
-## Usage
-
-Once installed, just ask your agent to help with marketing tasks:
-
-```
-"Help me optimize this landing page for conversions"
-→ Uses cro skill
-
-"Write homepage copy for my SaaS"
-→ Uses copywriting skill
-
-"Set up GA4 tracking for signups"
-→ Uses analytics skill
-
-"Create a 5-email welcome sequence"
-→ Uses emails skill
-```
-
-You can also invoke skills directly:
-
-```
-/cro
-/emails
-/seo-audit
-```
-
-## Skill Categories
-
-### Conversion Optimization
-- `cro` - Pages and forms
-- `signup` - Registration flows
-- `onboarding` - Post-signup activation
-- `popups` - Modals and overlays
-- `paywalls` - In-app upgrade moments
-
-### Content & Copy
-- `copywriting` - Marketing page copy
-- `copy-editing` - Edit and polish existing copy
-- `cold-email` - B2B cold outreach emails and sequences
-- `emails` - Automated email flows
-- `social` - Social media content
-- `image` - AI image generation, design tools, and optimization
-
-### SEO & Discovery
-- `seo-audit` - Technical and on-page SEO
-- `ai-seo` - AI search optimization (AEO, GEO, LLMO)
-- `programmatic-seo` - Scaled page generation
-- `site-architecture` - Page hierarchy, navigation, URL structure
-- `competitors` - Comparison and alternative pages
-- `schema` - Structured data
-
-### Paid & Distribution
-- `ads` - Google, Meta, LinkedIn ad campaigns
-- `events` - Webinars, conferences, sponsorships, speaking
-- `ad-creative` - Bulk ad creative generation and iteration
-- `social` - Social media scheduling and strategy
-
-### Measurement & Testing
-- `analytics` - Event tracking setup
-- `ab-testing` - Experiment design
-
-### Retention
-- `churn-prevention` - Cancel flows, save offers, dunning, payment recovery
-
-### Growth Engineering
-- `co-marketing` - Partner identification and joint campaigns
-- `free-tools` - Marketing tools and calculators
-- `referrals` - Referral and affiliate programs
-
-### Strategy & Monetization
-- `marketing-ideas` - 140 SaaS marketing ideas
-- `marketing-psychology` - Mental models and psychology
-- `launch` - Product launches and announcements
-- `pricing` - Pricing, packaging, and monetization
-
-### Sales & RevOps
-- `revops` - Lead lifecycle, scoring, routing, pipeline management
-- `sales-enablement` - Sales decks, one-pagers, objection docs, demo scripts
-
-## Contributing
-
-Found a way to improve a skill? Have a new skill to suggest? PRs and issues welcome!
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding or improving skills.
-
-## License
-
-[MIT](LICENSE) - Use these however you want.
-
-<br />
-<br />
-<a href="https://vercel.com/open-source-program">
-  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge-2026.svg" />
-</a>
